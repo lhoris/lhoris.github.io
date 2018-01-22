@@ -1,12 +1,10 @@
 ---
-layout: index-material-sidebar-left
-title: Ooops!
+layout: default
+title: "404: Page not found"
+permalink: 404.html
 ---
-<div class="error">
-    <p>Something seems to have gone wrong here. Sorry 'bout that</p>
-    <p>Maybe we can make up for it with some posts and then be friends again?</p>
-</div>
 
-{% for post in site.posts limit:4 %}
-    {% include article_index.html %}
-{% endfor %}
+<div class="page">
+  <h1 class="page-title">404: Page not found</h1>
+  <p class="lead">Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href="{{ site.baseurl }}">Head back home</a> to try finding it again.</p>
+</div>
