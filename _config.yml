@@ -1,76 +1,123 @@
-# Site
-title:              Moon
-bio:                'Minimal, one column jekyll theme.'
-description:        "Moon is a minimal, one column jekyll theme for your blog."
-reading_time:       true
-words_per_minute:   200
-logo:               'assets/img/logo.png'
-background:         'assets/img/placeholder-big.jpg'
-tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
-locale:             en_US
-url:                https://taylantatli.github.io/Moon
+full_rebuild: true
+name: Gridster
+description: the material experience for jekyll
+destination: jekyllbuild
+url: #place url
+baseurl: #place folder name if site is served in subfolder
+permalink: /:title/
+paginate: 8
+paginate_path: /page/:num/
+infinite_scroll: true #change to false if you want to use pagination
+gems: [jekyll-paginate]
+tag_dir: /tag
+category_dir: /category
+author_dir: /author
+author_title_prefix: 'Posted by '
+media_folder: /media/compressed
+author_default_avatar: /profile-pic.jpg
+tumblr: "#"
+pinterest: "#"
+instagram: "#"
+twitter: "#"
+facebook: "#"
+youtube: "#"
+vimeo: "#"
+soundcloud: "#"
 
-# Jekyll
-permalink:          /:title/
-markdown:           kramdown
-highlighter:        rouge
+encoding: utf-8
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post-material-sidebar-left"
+      type: "standard"
+      homedisplay: "featimg"
+markdown: kramdown
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
-mathjax:            true
-sass:
-  sass_dir:         _sass
-  style:            compressed
+  input: GFM
+  syntax_highlighter: rouge
+relative_permalinks: false
+exclude: [.git, .gitignore, sass, .sass-cache, package.json, gruntfile.js, node_modules, README.md, jekyllbuild]
 
-# Comments
-disqus_shortname:   taylantatli
-
-# Social
-# if you don't have any of social below, comment the line.
-#google:
-  #plus:            #username
-  #analytics:
-  #verify:
-  #ad-client:
-  #ad-slot:
-#bing-verify:
-#email:
-twitter:            username
-facebook:           username
-github-url:         username
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
-#xing:              username
-instagram:          username
-#lastfm:            username
-#tumblr:            username
-#medium:            '@username'
-#pinterest:         username
-#foursquare:        username
-steam:              username
-#dribbble:          username
-#youtube:           username
-#youtube-channel:   channel
-#soundcloud:        username
-#weibo:             username
-#flickr:            username
-#codepen:           username
-#keybase:           username
-#xmpp:              username@server.com
-#hackernews:        username
-
-# Gems
-gems:
-  - jekyll-mentions
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
-
-jekyll-mentions:
-    base_url: https://github.com
-
-# Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+# prose.io configurations
+prose:
+  media: "img"
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+      - name: "layout"
+        field:
+          element: "select"
+          label: "Layout"
+          help: "display post at full width or with sidebar"
+          options:
+            - name: "with sidebar"
+              value: "post"
+            - name: "full width"
+              value: "post-full"
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+          help: "author id as defined within _data/authors.yml"
+          type: "text"
+      - name: "featimg"
+        field:
+          element: "text"
+          label: "Featured Image"
+          help: "featured image within the img-folder"
+          type: "text"
+      - name: "type"
+        field:
+          element: "select"
+          label: "Post Type"
+          help: "each type has some special feature"
+          options:
+            - name: "Standard"
+              value: "standard"
+            - name: "Image"
+              value: "image"
+            - name: "Gallery"
+              value: "gallery"
+            - name: "Audio"
+              value: "audio"
+            - name: "YouTube"
+              value: "youtube"
+            - name: "Vimeo"
+              value: "vimeo"
+      - name: "homedisplay"
+        field:
+          element: "select"
+          label: "Home Display"
+          help: "decide whether to display embedded element (for post types: audio, youtube, vimeo) or Featured Image on home page"
+          options:
+            - name: "Featured Image"
+              value: "featimg"
+            - name: "Embedded Element"
+              value: "iframe"
+      - name: "vimeo-embed"
+        field:
+          element: "text"
+          label: "Vimeo Embedding Code"
+          help: "Set post type to vimeo in order for this to work"
+      - name: "gallery-id"
+        field:
+          element: "text"
+          label: "Gallery ID"
+          help: "ID of the gallery defined within _data/galleries.yml - use include in content to use"
+      - name: "audio-embed"
+        field:
+          element: "text"
+          label: "Audio Embedding Code"
+          help: "Set post type to audio in order for this to work"
+      - name: "yt-video-id"
+        field:
+          element: "text"
+          label: "YouTube Video ID"
+          help: "Set post type to youtube in order for this to work. Do not set featured image, as the youtube video thumbnail will be used"
+          type: "text"
