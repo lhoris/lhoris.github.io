@@ -1,5 +1,7 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'rouge'
-gem 'jekyll'
-gem 'jemoji'
+gem "jekyll", "~> 3.2.1"
+gem "jekyll-sitemap"
+gem "jekyll-gist"
+gem 'jekyll-mentions'
+gem 'jekyll-feed'
