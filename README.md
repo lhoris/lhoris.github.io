@@ -2,6 +2,8 @@
 
 Obsidian + Quartz 기반의 개인 기술 위키 및 디지털 가든(Digital Garden) 저장소입니다.
 
+> [https://lhoris.github.io](https://lhoris.github.io)
+
 ---
 
 ## Overview
