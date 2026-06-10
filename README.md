@@ -1,17 +1,80 @@
-# Quartz v5
+# lhoris 님의 개인 Wiki
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+Obsidian + Quartz 기반의 개인 기술 위키 및 디지털 가든(Digital Garden) 저장소입니다.
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+---
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+## Overview
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+이 저장소는 다음과 같은 목적으로 운영됩니다.
 
-## Sponsors
+* 개인 기술 블로그 및 디지털 가든 운영
+* AI Agent 및 LLM 관련 연구 내용 정리
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+---
+
+## Tech Stack
+
+* Obsidian
+* Quartz 5
+* GitHub Pages
+* GitHub Actions
+* Markdown
+
+---
+
+## Local Development
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run Local Server
+
+```bash
+npx quartz build --serve
+```
+
+로컬 기본 접속 주소
+
+> [http://localhost:8080](http://localhost:8080)
+
+---
+
+## Deployment
+
+GitHub Actions를 이용하여 GitHub Pages에 자동 배포합니다.
+
+배포 흐름
+
+```text
+Obsidian
+    ↓
+Markdown 작성
+    ↓
+Git Push
+    ↓
+GitHub Actions
+    ↓
+Quartz Build
+    ↓
+GitHub Pages
+```
+
+---
+
+## References
+
+* Quartz
+
+  * https://quartz.jzhao.xyz/
+
+* Obsidian
+
+  * https://obsidian.md/
+
+* GitHub Pages
+
+  * https://pages.github.com/
