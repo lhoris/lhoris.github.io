@@ -262,7 +262,7 @@ plugins:
       subdir: plugin
     enabled: true
     options:
-      theme: default
+      theme: dracula-for-obsidian
   - source: github:quartz-community/obsidian-plugin-excalidraw
     enabled: true
     options:
