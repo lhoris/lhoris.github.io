@@ -7,6 +7,7 @@ Obsidian + Quartz 5 기반으로 운영되며, 관심 주제·실험·메모를 
 
 ## 최근 문서
 
+- [[guides/cfr-java-decompiler|CFR Java Decompiler 사용법 — JAR 파일 디컴파일 실전 예제]]
 - [[guides/claude-code-telegram|Claude Code × Telegram 연동 가이드]]
 
 ---
